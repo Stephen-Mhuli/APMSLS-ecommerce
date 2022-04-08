@@ -1,11 +1,11 @@
 //imports/Packages->built-in
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, ActivityIndicator, FlatList} from "react-native";
-
+import { View,  StyleSheet, ActivityIndicator, FlatList} from "react-native";
+import { container, Header, Icon, Item, Input, Text, Container } from 'native-base';
 //components
 import ProductList from './ProductList';
 //products data
-const Data = require('../../Utilities/MockData/products.json');
+//const Data = require('../../Utilities/models/products');
 
 //Functional component start here
 const ProductContainer=()=>{
@@ -21,7 +21,18 @@ const ProductContainer=()=>{
     },[])
 
     return(
-        <View style={styles.container}>
+        <Container>
+            <Header searchBar rounded>
+                {/* <Item>
+                    <Icon name="android-search" />
+                    <Input 
+                        //placeholder="Search"
+                        //onFocus={}
+                        //onChangeText={(text)=>{}}
+                    />
+                </Item> */}
+            </Header>
+            <View style={styles.container}>
             <FlatList 
                 // horizontal
                 key={'#'}
@@ -31,7 +42,9 @@ const ProductContainer=()=>{
                 renderItem={({item})=> <ProductList key={item.id} item={item}/>}
                 
             />
-        </View>
+           </View>
+        </Container>
+        
     )
 }
 

@@ -12,7 +12,7 @@ const ProductCard = (props) => {
     <View style={StyleSheet.container}>
         <Image style={styles.image}
             resizeMode = 'contain'
-            source={{uri: image ? image : '../../assets/profile.jpg'}}
+            source={{uri: image ? image : ''}}
         />
         <View style={styles.card}/>
         <Text style={styles.title}>
