@@ -14,16 +14,16 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
 
 const WelcomeScreen = ({ navigation }) => {
-   const { colors } = useTheme();
+   //const { colors } = useTheme();
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
+          <StatusBar backgroundColor='green' barStyle="light-content"/>
         <View style={styles.header}>
             <Animatable.Image 
-                animation="pulse"
-                easing="ease-out"
-                iterationCount={4}
+                // animation="pulse"
+                // easing="ease-out"
+                // iterationCount="infinite"
             source={require('../../assets/log-e.jpg')}
             style={styles.logo}
             resizeMode="stretch"
