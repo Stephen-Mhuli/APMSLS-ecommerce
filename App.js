@@ -27,7 +27,7 @@ export default function App() {
   if(!isLoading){
     return(
       <View style={styles.activity}>
-        <ActivityIndicator size="large"/>
+        <ActivityIndicator size="large" color="#FF6347" />
       </View>
     );
   }

@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-        paddingBottom: 50
+        paddingBottom: 20
     },
     footer: {
         flex: Platform.OS === 'ios' ? 3 : 5,

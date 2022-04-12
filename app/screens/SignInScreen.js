@@ -19,7 +19,7 @@ import { useTheme } from 'react-native-paper';
 //import { AuthContext } from '../components/context';
 
 import Users from '../../Utilities/models/users';
-import { NavigationContainer } from '@react-navigation/native';
+//import { NavigationContainer } from '@react-navigation/native';
 
 const SignInScreen = ({ navigation }) => {
 
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-        paddingBottom: 50
+        paddingBottom: 20
     },
     footer: {
         flex: 3,

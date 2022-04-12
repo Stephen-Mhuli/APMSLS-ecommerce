@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "FYP project",
+    "githubUrl": "https://github.com/Stephen-Mhuli/APMSLS-ecommerce"
   }
 }
