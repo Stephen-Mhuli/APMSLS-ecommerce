@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import {LinearGradient} from 'expo-linear-gradient';
-// import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -20,8 +19,9 @@ import { useTheme } from 'react-native-paper';
 //import { AuthContext } from '../components/context';
 
 import Users from '../../Utilities/models/users';
+import { NavigationContainer } from '@react-navigation/native';
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation }) => {
 
     const [data, setData] = React.useState({
         username: '',
@@ -117,10 +117,10 @@ const SignInScreen = () => {
       <View style={styles.container}>
           <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Welcome!</Text>
+            <Text style={styles.text_header} >Login To Continue!</Text>
         </View>
         <Animatable.View 
-            animation="fadeInUpBig"
+            // animation="fadeInUpBig"
             style={[styles.footer, {
                 backgroundColor: colors.background
             }]}
@@ -227,7 +227,7 @@ const SignInScreen = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => alert('go to SignUpScreen')}
+                    onPress={() => navigation.navigate('SignUp')}
                     style={[styles.signIn, {
                         borderColor: '#FF6347',
                         borderWidth: 1,

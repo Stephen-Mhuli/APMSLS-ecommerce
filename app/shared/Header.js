@@ -1,21 +1,18 @@
-import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native'
-import React from 'react'
+import { View, StyleSheet} from 'react-native';
+import React from 'react';
+import { Header as  HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
 
-const Header = () => {
+const Heading = () => {
   return (
-    <SafeAreaView style={styles.header}>
-      <Image 
-        source={require('../../assets/profile.jpg')}
-        resizeMode='contain'
-        style={{height: 50}}
-      />
-    </SafeAreaView>
+    <View>
+      <Header />
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
     header: {
-        marginTop: 80,//Todo Delete
+        marginTop: 30,//Todo Delete
         width: '100%',
         flexDirection: 'row',
         alignContent: 'center',
@@ -24,4 +21,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Header;
+export default Heading;

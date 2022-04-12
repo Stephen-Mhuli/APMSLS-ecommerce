@@ -16,8 +16,9 @@ import {LinearGradient} from 'expo-linear-gradient';
 // import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
+import { NavigationContainer } from '@react-navigation/native';
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation }) => {
 
     const [data, setData] = React.useState({
         username: '',
@@ -76,10 +77,10 @@ const SignInScreen = () => {
       <View style={styles.container}>
           <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Register Now!</Text>
+            <Text style={styles.text_header}>Sign Up To Continue!</Text>
         </View>
         <Animatable.View 
-            animation="fadeInUpBig"
+            // animation="fadeInUpBig"
             style={styles.footer}
         >
             <ScrollView>
@@ -202,7 +203,7 @@ const SignInScreen = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={() => alert('go back')}
+                    onPress={() => navigation.goBack()}
                     style={[styles.signIn, {
                         borderColor: '#FF6347',
                         borderWidth: 1,

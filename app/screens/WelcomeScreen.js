@@ -14,7 +14,7 @@ import {LinearGradient} from 'expo-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
    const { colors } = useTheme();
 
     return (
@@ -22,8 +22,9 @@ const WelcomeScreen = () => {
           <StatusBar backgroundColor='#FF6347' barStyle="light-content"/>
         <View style={styles.header}>
             <Animatable.Image 
-                animation="bounceIn"
-                duraton="1500"
+                animation="pulse"
+                easing="ease-out"
+                iterationCount={4}
             source={require('../../assets/log-e.jpg')}
             style={styles.logo}
             resizeMode="stretch"
@@ -33,14 +34,14 @@ const WelcomeScreen = () => {
             style={[styles.footer, {
                 backgroundColor: "#fff"
             }]}
-            animation="fadeInUpBig"
+            // animation="fadeInUpBig"
         >
             <Text style={[styles.title, {
                 color: "black"
             }]}>Find best agricultural products from anywhere!</Text>
             <Text style={styles.text}>Sign in with account</Text>
             <View style={styles.button}>
-            <TouchableOpacity onPress={()=>alert('clicked')}>
+            <TouchableOpacity onPress={()=>navigation.navigate('SignIn')}>
                 <LinearGradient
                     colors={['#FFA07A', '#FF6347']}
                     style={styles.signIn}
