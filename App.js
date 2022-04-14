@@ -15,7 +15,7 @@ import { ActivityIndicator } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-
+Ionicons.loadFont();
 const Tab = createBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +24,6 @@ export default function App() {
 
   const [isLoading, setIsLoading] = useState(false);
   //const [userToken, setUserToken] = useState(null);
-
   useEffect(()=>{
     setTimeout(()=>{
       setIsLoading(true);
@@ -38,7 +37,7 @@ export default function App() {
       </View>
     );
   }
-  
+  //BottomTabs navigator
   function HomeTabsStack() {
     return (
       <Tab.Navigator initialRouteName="HomeScreen">
@@ -91,7 +90,7 @@ export default function App() {
     </Tab.Navigator>
     )
   }
-
+//Main Stack navigator in which BottomTabs navigator is included
   return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{
