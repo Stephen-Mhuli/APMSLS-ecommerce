@@ -1,4 +1,4 @@
-import { ADD_TO_CART,REMOVE_FROM_CART } from "../cartAction"; //action
+import { ADD_TO_CART,REMOVE_FROM_CART } from "../actions/cartAction"; //action
 
 const intiialState = {
     cartItems :[] // multiple

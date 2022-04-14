@@ -3,7 +3,7 @@ import {  StyleSheet, View } from 'react-native';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import SignInScreen from './app/screens/SignInScreen';
-//import ProductScreen from './app/screens/ProductScreen';
+import ProductScreen from './app/screens/ProductScreen';
 import SettingsScreen from './app/screens/SettingsScreen';
 import HomeScreen from './app/screens/HomeScreen';
 import CartScreen from './app/screens/CartScreen';
@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import { ActivityIndicator } from 'react-native-paper';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import OrderScreen from './app/screens/OrderScreen';
 
 Ionicons.loadFont();
 const Tab = createBottomTabNavigator();
@@ -40,11 +41,12 @@ export default function App() {
   //BottomTabs navigator
   function HomeTabsStack() {
     return (
-      <Tab.Navigator initialRouteName="HomeScreen">
+      <Tab.Navigator initialRouteName="ProductScreen">
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={ProductScreen}
         options={{
+          //headerShown: false,
           tabBarActiveTintColor: '#FF6347',
           tabBarIcon: ({color, size}) => (
             <Ionicons name="home" color={color} size={size} 
@@ -52,7 +54,7 @@ export default function App() {
         }}  />
          <Tab.Screen
         name="Orders"
-        component={CartScreen}
+        component={OrderScreen}
         options={{
           tabBarActiveTintColor: '#FF6347',
           tabBarIcon: ({color, size}) => (
