@@ -11,7 +11,7 @@ const BottomTabsNavigator = () => {
              name="Home" 
              component={MainStackNavigator}
              options={{
-                 headerShown: false,
+                 headerShown: true,
                  tabBarActiveTintColor: '#FF6347',
                  tabBarIcon: ({color, size}) => (
                   <Ionicons name="home" color={color} size={size} 
@@ -20,7 +20,7 @@ const BottomTabsNavigator = () => {
               name="Cart" 
               component={CartStackNavigator} 
               options={{
-                  headerShown: false,
+                  headerShown: true,
                   tabBarActiveTintColor: '#FF6347',
                   tabBarIcon: ({color, size}) => (
                      <Ionicons name="cart" color={color} size={size} 
@@ -30,7 +30,7 @@ const BottomTabsNavigator = () => {
              name="Orders" 
              component={OrderStackNavigator} 
              options={{
-                 headerShown: false,
+                 headerShown: true,
                  tabBarActiveTintColor: '#FF6347',
                   tabBarIcon: ({color, size}) => (
                      <Ionicons name="reorder-four" color={color} size={size} 
@@ -39,7 +39,7 @@ const BottomTabsNavigator = () => {
               name="Profile"
               component={ProfileStackNavigator} 
               options={{
-                  headerShown: false,
+                  headerShown: true,
                   tabBarActiveTintColor: '#FF6347',
                   tabBarIcon: ({color, size}) => (
                      <Ionicons name="person-outline" color={color} size={size} 

@@ -4,13 +4,14 @@ import ProductCard from '../components/ProductCard';
 import {  Image, Divider } from '@rneui/themed';
 import { Searchbar } from 'react-native-paper';
 import { MaterialIcons } from '@expo/vector-icons';
+import ProductDetailScreen from './EditProfileScreen'
 
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const BASE_URI = 'https://source.unsplash.com/random?sig=';
 
-const ProductScreen = () => {
+const ProductScreen = ({ navigation }) => {
 
 const [product, setProduct] = useState([
   {
@@ -53,7 +54,7 @@ const onChangeSearch = query => setSearchQuery(query);
         style={styles.productlist}
         keyExtractor={(e)=> e}
         renderItem={({ item })=>(
-          <TouchableOpacity style={styles.productcard} onPress={()=>console.log('clicked')}>
+          <TouchableOpacity style={styles.productcard} onPress={()=>navigation.navigate('productDetails')}>
             <Image
             source={{ uri: BASE_URI + item }}
             containerStyle={styles.imageStyle}

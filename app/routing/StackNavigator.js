@@ -10,7 +10,8 @@ import ProductDetailScreen from '../screens/ProductDetailScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import EditProfileScreen from '../screens/EditProfileScreen';
 import CartScreen from '../screens/CartScreen';
-import CheckOutScreen from '../screens/CheckOutScreen'
+import CheckOutScreen from '../screens/CheckOutScreen';
+
 
 
 const Stack = createNativeStackNavigator();
