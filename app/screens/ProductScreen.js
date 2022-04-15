@@ -75,20 +75,21 @@ const onChangeSearch = query => setSearchQuery(query);
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     paddingHorizontal: 0,
     paddingVertical: 1,
-    backgroundColor: 'grey',
+    backgroundColor: '#fff',
     marginEnd: 0
   },
   search: {
-    marginHorizontal: 5,
+    marginHorizontal: 4,
     position: 'relative'
   },
   productcard: {
     width: windowWidth/2 -10,
     borderRadius: 10,
     margin: 4,
-    backgroundColor: '#fff',
+    backgroundColor: '#d3d3d3',
     
   },
   productlist: {

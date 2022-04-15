@@ -16,7 +16,7 @@ const OrderScreen = () => {
             keyExtractor={(item)=>item.id}
             renderItem={({item})=>(
                 <View>
-                    <Text>Order screeeeeeen</Text>
+                    
                 </View>
             )}
         />
@@ -26,7 +26,11 @@ const OrderScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-
+        flex: 1,
+        paddingHorizontal: 0,
+        paddingVertical: 1,
+        backgroundColor: 'grey',
+        marginEnd: 0
     },
     orderStyle: {
 
